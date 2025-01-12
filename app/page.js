@@ -5,7 +5,7 @@ import { useLaunchParams } from "@telegram-apps/sdk-react";
 import Image from "next/image";
 import dynamic from 'next/dynamic';
 
-const MainTableClient = dynamic(() => Promise.resolve(TaskBoard), {
+const MainTableClient = dynamic(() => Promise.resolve(MainTable), {
   ssr: false
 });
 
