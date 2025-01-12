@@ -22,10 +22,11 @@ bot.command('help', (ctx) => {
 });
 
 bot.command('webapp', (ctx) => {
+    const user = ctx.from
   ctx.reply('Open Web App', {
     reply_markup: {
       inline_keyboard: [[
-        { text: "Open App", web_app: { url: WEBAPP_URL || '' }}
+        { text: "Open App", web_app: { url: `${WEBAPP_URL}?startapp=${user}` || '' }}
       ]]
     }
   });
