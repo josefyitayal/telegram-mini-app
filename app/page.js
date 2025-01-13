@@ -1,8 +1,7 @@
 "use client";
 
-import { Suspense, useEffect, useState } from 'react';
+import {  useEffect, useState } from 'react';
 import { useLaunchParams } from "@telegram-apps/sdk-react";
-import Image from "next/image";
 import dynamic from 'next/dynamic';
 
 const MainTableClient = dynamic(() => Promise.resolve(MainTable), {
@@ -59,9 +58,7 @@ export default function Home() {
   return (
     <div className="h-screen w-full flex justify-center items-center">
       <h1 className="text-3xl font-bold text-center">Yosef Prime VX</h1>
-      <Suspense fallback={<div className="p-8">Loading...</div>}>
         <MainTableClient />
-      </Suspense>
     </div>
   );
 }
